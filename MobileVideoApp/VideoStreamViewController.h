@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VideoStreamViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface VideoStreamViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

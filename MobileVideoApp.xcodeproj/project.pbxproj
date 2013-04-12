@@ -14,6 +14,8 @@
 		2804DB7817186A1500C36628 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2804DB7717186A1500C36628 /* VideoTableViewCell.xib */; };
 		2804DB7D17188C3A00C36628 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2804DB7C17188C3A00C36628 /* LoginViewController.m */; };
 		2804DB7F17188C5700C36628 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2804DB7E17188C5700C36628 /* LoginViewController.xib */; };
+		2804DB8217189AF200C36628 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2804DB8117189AF200C36628 /* SystemConfiguration.framework */; };
+		2804DB8417189AF800C36628 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2804DB8317189AF800C36628 /* MobileCoreServices.framework */; };
 		28FA7AA41715775100C84B65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FA7AA31715775100C84B65 /* UIKit.framework */; };
 		28FA7AA61715775100C84B65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FA7AA51715775100C84B65 /* Foundation.framework */; };
 		28FA7AA81715775100C84B65 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FA7AA71715775100C84B65 /* CoreGraphics.framework */; };
@@ -42,6 +44,8 @@
 		2804DB7B17188C3A00C36628 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2804DB7C17188C3A00C36628 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2804DB7E17188C5700C36628 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		2804DB8117189AF200C36628 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2804DB8317189AF800C36628 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		28FA7AA01715775100C84B65 /* MobileVideoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileVideoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28FA7AA31715775100C84B65 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28FA7AA51715775100C84B65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2804DB8417189AF800C36628 /* MobileCoreServices.framework in Frameworks */,
+				2804DB8217189AF200C36628 /* SystemConfiguration.framework in Frameworks */,
 				28FA7AA41715775100C84B65 /* UIKit.framework in Frameworks */,
 				28FA7AA61715775100C84B65 /* Foundation.framework in Frameworks */,
 				28FA7AA81715775100C84B65 /* CoreGraphics.framework in Frameworks */,
@@ -142,6 +148,8 @@
 		28FA7AA21715775100C84B65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2804DB8317189AF800C36628 /* MobileCoreServices.framework */,
+				2804DB8117189AF200C36628 /* SystemConfiguration.framework */,
 				28FA7AA31715775100C84B65 /* UIKit.framework */,
 				28FA7AA51715775100C84B65 /* Foundation.framework */,
 				28FA7AA71715775100C84B65 /* CoreGraphics.framework */,

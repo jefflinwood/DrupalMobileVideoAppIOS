@@ -16,7 +16,7 @@
 #import "VideoTableViewCell.h"
 
 @interface VideoStreamViewController ()
-
+@property (nonatomic, strong) UIImagePickerController *imagePickerController;
 @end
 
 @implementation VideoStreamViewController
@@ -25,10 +25,42 @@
     [self.tableView reloadData];
 }
 
-- (NSString*) thumbnailVideoURI {
-    return @"http://dirtrunning.com/sites/default/files/styles/large/public/videos/thumbnails/9/thumbnail-9_0003.jpg?itok=-iYZxO5e";
+- (NSString*) thumbnailVideoURI:(NSString *)drupalURI {
+    
+    return [drupalURI stringByReplacingOccurrencesOfString:@"public://" withString:@"http://dirtrunning.com/sites/default/files/styles/large/public/"];
 }
 
+- (void) takeVideo:(id)sender {
+    self.imagePickerController = [[UIImagePickerController alloc] init];
+    self.imagePickerController.delegate = self;
+    self.imagePickerController.mediaTypes = @[(NSString*)kUTTypeMovie];
+
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                                 delegate:self
+                                                        cancelButtonTitle:@"Cancel"
+                                                   destructiveButtonTitle:nil
+                                                        otherButtonTitles:@"Take Video", @"Choose Existing", nil];
+        [actionSheet showInView:self.view];
+    } else {
+        self.imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:self.imagePickerController animated:YES completion:nil];
+    }
+}
+         
+#pragma mark UIActionSheetDelegate methods
+ - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+     if (buttonIndex == 0) {
+         self.imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+     } else if (buttonIndex == 1) {
+         self.imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+     }
+     
+     [self presentViewController:self.imagePickerController animated:YES completion:nil];
+ }
+         
+         
 #pragma mark UITableViewDataSource methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -48,12 +80,20 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     VideoTableViewCell *videoCell = (VideoTableViewCell*)cell;
     Video *video = [[AppData sharedInstance] allVideos][indexPath.row];
-    NSString *publicURI = [self thumbnailVideoURI];
+    NSString *publicURI = [self thumbnailVideoURI:video.thumbnailDrupalURI];
     [videoCell.thumbnailImageView setImageWithURL:[NSURL URLWithString:publicURI]];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 240;
+}
+
+#pragma mark UIImagePickerControllerDelegate methods
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSLog(@"Image picked - %@",info);
+	
 }
 
 #pragma mark UIViewController methods
@@ -63,6 +103,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title = @"Videos";
     }
     return self;
 }
@@ -71,11 +112,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(takeVideo:)];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh:) name:VIDEOS_RELOADED object:nil];
+
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
