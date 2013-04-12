@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2804DB6B1718519A00C36628 /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2804DB6A1718519A00C36628 /* AppData.m */; };
+		2804DB6F171851B300C36628 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 2804DB6E171851B300C36628 /* Video.m */; };
+		2804DB721718660C00C36628 /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2804DB711718660C00C36628 /* AppHelper.m */; };
+		2804DB76171869F900C36628 /* VideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2804DB75171869F900C36628 /* VideoTableViewCell.m */; };
+		2804DB7817186A1500C36628 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2804DB7717186A1500C36628 /* VideoTableViewCell.xib */; };
+		2804DB7D17188C3A00C36628 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2804DB7C17188C3A00C36628 /* LoginViewController.m */; };
+		2804DB7F17188C5700C36628 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2804DB7E17188C5700C36628 /* LoginViewController.xib */; };
+		28FA7AA41715775100C84B65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FA7AA31715775100C84B65 /* UIKit.framework */; };
+		28FA7AA61715775100C84B65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FA7AA51715775100C84B65 /* Foundation.framework */; };
+		28FA7AA81715775100C84B65 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FA7AA71715775100C84B65 /* CoreGraphics.framework */; };
+		28FA7AAE1715775100C84B65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28FA7AAC1715775100C84B65 /* InfoPlist.strings */; };
+		28FA7AB01715775100C84B65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FA7AAF1715775100C84B65 /* main.m */; };
+		28FA7AB41715775100C84B65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FA7AB31715775100C84B65 /* AppDelegate.m */; };
+		28FA7AB61715775100C84B65 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 28FA7AB51715775100C84B65 /* Default.png */; };
+		28FA7AB81715775100C84B65 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28FA7AB71715775100C84B65 /* Default@2x.png */; };
+		28FA7ABA1715775100C84B65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28FA7AB91715775100C84B65 /* Default-568h@2x.png */; };
+		28FA7AC417157A8B00C84B65 /* VideoStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FA7AC217157A8B00C84B65 /* VideoStreamViewController.m */; };
+		28FA7AC517157A8B00C84B65 /* VideoStreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28FA7AC317157A8B00C84B65 /* VideoStreamViewController.xib */; };
+		8995680692BB4AB3914D6255 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40FD0995CA9B48FF8C5DEFAD /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2804DB691718519A00C36628 /* AppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppData.h; sourceTree = "<group>"; };
+		2804DB6A1718519A00C36628 /* AppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppData.m; sourceTree = "<group>"; };
+		2804DB6D171851B300C36628 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		2804DB6E171851B300C36628 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		2804DB701718660C00C36628 /* AppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHelper.h; sourceTree = "<group>"; };
+		2804DB711718660C00C36628 /* AppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppHelper.m; sourceTree = "<group>"; };
+		2804DB731718677800C36628 /* AppNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppNotifications.h; sourceTree = "<group>"; };
+		2804DB74171869F900C36628 /* VideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewCell.h; sourceTree = "<group>"; };
+		2804DB75171869F900C36628 /* VideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewCell.m; sourceTree = "<group>"; };
+		2804DB7717186A1500C36628 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
+		2804DB7B17188C3A00C36628 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2804DB7C17188C3A00C36628 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2804DB7E17188C5700C36628 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		28FA7AA01715775100C84B65 /* MobileVideoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileVideoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28FA7AA31715775100C84B65 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28FA7AA51715775100C84B65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		28FA7AA71715775100C84B65 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28FA7AAB1715775100C84B65 /* MobileVideoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MobileVideoApp-Info.plist"; sourceTree = "<group>"; };
+		28FA7AAD1715775100C84B65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		28FA7AAF1715775100C84B65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		28FA7AB11715775100C84B65 /* MobileVideoApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobileVideoApp-Prefix.pch"; sourceTree = "<group>"; };
+		28FA7AB21715775100C84B65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		28FA7AB31715775100C84B65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		28FA7AB51715775100C84B65 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		28FA7AB71715775100C84B65 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		28FA7AB91715775100C84B65 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		28FA7AC117157A8B00C84B65 /* VideoStreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoStreamViewController.h; sourceTree = "<group>"; };
+		28FA7AC217157A8B00C84B65 /* VideoStreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoStreamViewController.m; sourceTree = "<group>"; };
+		28FA7AC317157A8B00C84B65 /* VideoStreamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoStreamViewController.xib; sourceTree = "<group>"; };
+		40FD0995CA9B48FF8C5DEFAD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		86C280831AB546A39321A8DC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28FA7A9D1715775100C84B65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28FA7AA41715775100C84B65 /* UIKit.framework in Frameworks */,
+				28FA7AA61715775100C84B65 /* Foundation.framework in Frameworks */,
+				28FA7AA81715775100C84B65 /* CoreGraphics.framework in Frameworks */,
+				8995680692BB4AB3914D6255 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2804DB681718518900C36628 /* App Wide */ = {
+			isa = PBXGroup;
+			children = (
+				2804DB731718677800C36628 /* AppNotifications.h */,
+				2804DB701718660C00C36628 /* AppHelper.h */,
+				2804DB711718660C00C36628 /* AppHelper.m */,
+				2804DB691718519A00C36628 /* AppData.h */,
+				2804DB6A1718519A00C36628 /* AppData.m */,
+			);
+			name = "App Wide";
+			sourceTree = "<group>";
+		};
+		2804DB6C171851A900C36628 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2804DB6D171851B300C36628 /* Video.h */,
+				2804DB6E171851B300C36628 /* Video.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2804DB7917188B5600C36628 /* Video Stream */ = {
+			isa = PBXGroup;
+			children = (
+				28FA7AC117157A8B00C84B65 /* VideoStreamViewController.h */,
+				28FA7AC217157A8B00C84B65 /* VideoStreamViewController.m */,
+				28FA7AC317157A8B00C84B65 /* VideoStreamViewController.xib */,
+				2804DB74171869F900C36628 /* VideoTableViewCell.h */,
+				2804DB75171869F900C36628 /* VideoTableViewCell.m */,
+				2804DB7717186A1500C36628 /* VideoTableViewCell.xib */,
+			);
+			name = "Video Stream";
+			sourceTree = "<group>";
+		};
+		2804DB7A17188B7A00C36628 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2804DB7B17188C3A00C36628 /* LoginViewController.h */,
+				2804DB7C17188C3A00C36628 /* LoginViewController.m */,
+				2804DB7E17188C5700C36628 /* LoginViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		28FA7A971715775100C84B65 = {
+			isa = PBXGroup;
+			children = (
+				28FA7AA91715775100C84B65 /* MobileVideoApp */,
+				28FA7AA21715775100C84B65 /* Frameworks */,
+				28FA7AA11715775100C84B65 /* Products */,
+				86C280831AB546A39321A8DC /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		28FA7AA11715775100C84B65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28FA7AA01715775100C84B65 /* MobileVideoApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28FA7AA21715775100C84B65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28FA7AA31715775100C84B65 /* UIKit.framework */,
+				28FA7AA51715775100C84B65 /* Foundation.framework */,
+				28FA7AA71715775100C84B65 /* CoreGraphics.framework */,
+				40FD0995CA9B48FF8C5DEFAD /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28FA7AA91715775100C84B65 /* MobileVideoApp */ = {
+			isa = PBXGroup;
+			children = (
+				2804DB6C171851A900C36628 /* Models */,
+				2804DB681718518900C36628 /* App Wide */,
+				28FA7AC017157A7300C84B65 /* View Controllers */,
+				28FA7AB21715775100C84B65 /* AppDelegate.h */,
+				28FA7AB31715775100C84B65 /* AppDelegate.m */,
+				28FA7AAA1715775100C84B65 /* Supporting Files */,
+			);
+			path = MobileVideoApp;
+			sourceTree = "<group>";
+		};
+		28FA7AAA1715775100C84B65 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28FA7AAB1715775100C84B65 /* MobileVideoApp-Info.plist */,
+				28FA7AAC1715775100C84B65 /* InfoPlist.strings */,
+				28FA7AAF1715775100C84B65 /* main.m */,
+				28FA7AB11715775100C84B65 /* MobileVideoApp-Prefix.pch */,
+				28FA7AB51715775100C84B65 /* Default.png */,
+				28FA7AB71715775100C84B65 /* Default@2x.png */,
+				28FA7AB91715775100C84B65 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28FA7AC017157A7300C84B65 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2804DB7A17188B7A00C36628 /* Login */,
+				2804DB7917188B5600C36628 /* Video Stream */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28FA7A9F1715775100C84B65 /* MobileVideoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28FA7ABD1715775100C84B65 /* Build configuration list for PBXNativeTarget "MobileVideoApp" */;
+			buildPhases = (
+				28FA7A9C1715775100C84B65 /* Sources */,
+				28FA7A9D1715775100C84B65 /* Frameworks */,
+				28FA7A9E1715775100C84B65 /* Resources */,
+				DF121130EDBF44F18369A6B8 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileVideoApp;
+			productName = MobileVideoApp;
+			productReference = 28FA7AA01715775100C84B65 /* MobileVideoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28FA7A981715775100C84B65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Biscotti Labs, LLC";
+			};
+			buildConfigurationList = 28FA7A9B1715775100C84B65 /* Build configuration list for PBXProject "MobileVideoApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 28FA7A971715775100C84B65;
+			productRefGroup = 28FA7AA11715775100C84B65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28FA7A9F1715775100C84B65 /* MobileVideoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28FA7A9E1715775100C84B65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28FA7AAE1715775100C84B65 /* InfoPlist.strings in Resources */,
+				28FA7AB61715775100C84B65 /* Default.png in Resources */,
+				28FA7AB81715775100C84B65 /* Default@2x.png in Resources */,
+				28FA7ABA1715775100C84B65 /* Default-568h@2x.png in Resources */,
+				28FA7AC517157A8B00C84B65 /* VideoStreamViewController.xib in Resources */,
+				2804DB7817186A1500C36628 /* VideoTableViewCell.xib in Resources */,
+				2804DB7F17188C5700C36628 /* LoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DF121130EDBF44F18369A6B8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28FA7A9C1715775100C84B65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28FA7AB01715775100C84B65 /* main.m in Sources */,
+				28FA7AB41715775100C84B65 /* AppDelegate.m in Sources */,
+				28FA7AC417157A8B00C84B65 /* VideoStreamViewController.m in Sources */,
+				2804DB6B1718519A00C36628 /* AppData.m in Sources */,
+				2804DB6F171851B300C36628 /* Video.m in Sources */,
+				2804DB721718660C00C36628 /* AppHelper.m in Sources */,
+				2804DB76171869F900C36628 /* VideoTableViewCell.m in Sources */,
+				2804DB7D17188C3A00C36628 /* LoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		28FA7AAC1715775100C84B65 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28FA7AAD1715775100C84B65 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		28FA7ABB1715775100C84B65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		28FA7ABC1715775100C84B65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28FA7ABE1715775100C84B65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86C280831AB546A39321A8DC /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MobileVideoApp/MobileVideoApp-Prefix.pch";
+				INFOPLIST_FILE = "MobileVideoApp/MobileVideoApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		28FA7ABF1715775100C84B65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86C280831AB546A39321A8DC /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MobileVideoApp/MobileVideoApp-Prefix.pch";
+				INFOPLIST_FILE = "MobileVideoApp/MobileVideoApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28FA7A9B1715775100C84B65 /* Build configuration list for PBXProject "MobileVideoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28FA7ABB1715775100C84B65 /* Debug */,
+				28FA7ABC1715775100C84B65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28FA7ABD1715775100C84B65 /* Build configuration list for PBXNativeTarget "MobileVideoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28FA7ABE1715775100C84B65 /* Debug */,
+				28FA7ABF1715775100C84B65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28FA7A981715775100C84B65 /* Project object */;
+}
