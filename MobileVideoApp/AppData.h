@@ -13,6 +13,7 @@
 @interface AppData : NSObject
 
 - (void) loginToDrupalWithUsername:(NSString*)username password:(NSString*)password success:(void(^)(id response))success failure:(void(^)(NSError *error))failure;
+- (void) videoUploadWithData:(NSData*)videoData success:(void(^)(id response))success failure:(void(^)(NSError *error))failure;
 
 - (NSArray*) allVideos;
 - (void) loadVideos;

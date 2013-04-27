@@ -12,8 +12,11 @@
 #import "AppData.h"
 #import "AppHelper.h"
 #import "AppNotifications.h"
+#import "LoginViewController.h"
 #import "Video.h"
 #import "VideoTableViewCell.h"
+
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface VideoStreamViewController ()
 @property (nonatomic, strong) UIImagePickerController *imagePickerController;
@@ -28,6 +31,11 @@
 - (NSString*) thumbnailVideoURI:(NSString *)drupalURI {
     
     return [drupalURI stringByReplacingOccurrencesOfString:@"public://" withString:@"http://dirtrunning.com/sites/default/files/styles/large/public/"];
+}
+
+- (NSString*) playVideoURI:(NSString *)drupalURI {
+    
+    return [drupalURI stringByReplacingOccurrencesOfString:@"public://" withString:@"http://dirtrunning.com/sites/default/files/"];
 }
 
 - (void) takeVideo:(id)sender {
@@ -47,6 +55,11 @@
         self.imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         [self presentViewController:self.imagePickerController animated:YES completion:nil];
     }
+}
+
+- (void) showSettings:(id)sender {
+    LoginViewController *loginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    [self presentViewController:loginViewController animated:YES completion:nil];
 }
          
 #pragma mark UIActionSheetDelegate methods
@@ -88,11 +101,24 @@
     return 240;
 }
 
+#pragma mark UITableViewDelegate methods
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Video *video = [[AppData sharedInstance] allVideos][indexPath.row];
+    NSString *playVideoURI = [self playVideoURI:video.mp4DrupalURI];
+
+    MPMoviePlayerViewController *moviePlayerController = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:playVideoURI]];
+    [self presentViewController:moviePlayerController animated:YES completion:nil];
+}
+
 #pragma mark UIImagePickerControllerDelegate methods
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    NSLog(@"Image picked - %@",info);
+    NSLog(@"Movie picked - %@",info);
+    NSURL *videoURL = [info objectForKey:UIImagePickerControllerMediaURL];
+    NSMutableData *videoData = [[NSMutableData alloc]initWithContentsOfURL:videoURL];
+    [[AppData sharedInstance] videoUploadWithData:videoData success:nil failure:nil];
+    [picker dismissViewControllerAnimated:YES completion:nil];
 	
 }
 
@@ -113,6 +139,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(takeVideo:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(showSettings:)];
 }
 
 - (void) viewWillAppear:(BOOL)animated {

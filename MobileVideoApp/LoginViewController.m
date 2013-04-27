@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 
+#import "AppData.h"
+
 #import <QuartzCore/QuartzCore.h>
 
 @interface LoginViewController (Private)
@@ -21,50 +23,15 @@
 @synthesize rememberMeSwitch = _rememberMeSwitch;
 
 - (IBAction)login:(id)sender {
-/*    //validate form fields to make sure they aren't blank
+    //validate form fields to make sure they aren't blank
     if(![self validateFormFields]) {
         return;
     }
-    
-    
-    
-    if ([session userInfo] != nil) {
-        //already logged in
+    [[AppData sharedInstance] loginToDrupalWithUsername:self.usernameTextField.text password:self.passwordTextField.text success:^(id response) {
         [self dismissViewControllerAnimated:YES completion:nil];
-    }
-    
-    if ([session connResult] == nil) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Unable to connect" message:@"Unable to connect to Drupal Server. Please check your network connection"  delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alertView show];
-        
-    }
-    DIOSUser *user = [[DIOSUser alloc] initWithSession:session];
-    
-    
-    //make the call out to Drupal
-    [self.activityIndicator setHidden:FALSE];
-    [self.activityIndicator startAnimating];
-    
-    //we do this so that activity indicator has a chance to start spinning
-    [self performSelector:@selector(loginToDrupal:) withObject:user afterDelay:0.05];
-    if ([[user userInfo] objectForKey:@"uid"]) {
-        //successful login
-        //set DIOS User on App Delegate
-        [self.delegate setCurrentUser:user];
-        //dismiss login view controller
-        [self dismissModalViewControllerAnimated:YES];
-        
-        //if remember me is on, save credentials
-        if (self.rememberMeSwitch.on) {
-            [[NSUserDefaults standardUserDefaults] setValue:self.usernameTextField.text forKey:@"username"];
-            [[NSUserDefaults standardUserDefaults] setValue:self.passwordTextField.text forKey:@"password"];
-        }
-        
-    } else {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Username/Password Incorrect" message:@"Unable to login. Please check your username and password"  delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK",nil];
-        [alertView show];        
-    }
-    */
+    } failure:^(NSError *error) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
 }
 
 - (BOOL) validateFormFields {

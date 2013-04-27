@@ -16,6 +16,8 @@
 		2804DB7F17188C5700C36628 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2804DB7E17188C5700C36628 /* LoginViewController.xib */; };
 		2804DB8217189AF200C36628 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2804DB8117189AF200C36628 /* SystemConfiguration.framework */; };
 		2804DB8417189AF800C36628 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2804DB8317189AF800C36628 /* MobileCoreServices.framework */; };
+		2804DB8A17198BF200C36628 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2804DB8917198BF200C36628 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2804DB8C1719954700C36628 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2804DB8B1719954700C36628 /* MediaPlayer.framework */; };
 		28FA7AA41715775100C84B65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FA7AA31715775100C84B65 /* UIKit.framework */; };
 		28FA7AA61715775100C84B65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FA7AA51715775100C84B65 /* Foundation.framework */; };
 		28FA7AA81715775100C84B65 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FA7AA71715775100C84B65 /* CoreGraphics.framework */; };
@@ -46,6 +48,9 @@
 		2804DB7E17188C5700C36628 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		2804DB8117189AF200C36628 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2804DB8317189AF800C36628 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2804DB8817198BF200C36628 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "NSData+Base64/NSData+Base64.h"; sourceTree = "<group>"; };
+		2804DB8917198BF200C36628 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "NSData+Base64/NSData+Base64.m"; sourceTree = "<group>"; };
+		2804DB8B1719954700C36628 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		28FA7AA01715775100C84B65 /* MobileVideoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileVideoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28FA7AA31715775100C84B65 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28FA7AA51715775100C84B65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -71,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2804DB8C1719954700C36628 /* MediaPlayer.framework in Frameworks */,
 				2804DB8417189AF800C36628 /* MobileCoreServices.framework in Frameworks */,
 				2804DB8217189AF200C36628 /* SystemConfiguration.framework in Frameworks */,
 				28FA7AA41715775100C84B65 /* UIKit.framework in Frameworks */,
@@ -127,9 +133,20 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		2804DB8717198BE200C36628 /* NSData+Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				2804DB8817198BF200C36628 /* NSData+Base64.h */,
+				2804DB8917198BF200C36628 /* NSData+Base64.m */,
+			);
+			name = "NSData+Base64";
+			sourceTree = "<group>";
+		};
 		28FA7A971715775100C84B65 = {
 			isa = PBXGroup;
 			children = (
+				2804DB8B1719954700C36628 /* MediaPlayer.framework */,
+				2804DB8717198BE200C36628 /* NSData+Base64 */,
 				28FA7AA91715775100C84B65 /* MobileVideoApp */,
 				28FA7AA21715775100C84B65 /* Frameworks */,
 				28FA7AA11715775100C84B65 /* Products */,
@@ -288,6 +305,7 @@
 				2804DB721718660C00C36628 /* AppHelper.m in Sources */,
 				2804DB76171869F900C36628 /* VideoTableViewCell.m in Sources */,
 				2804DB7D17188C3A00C36628 /* LoginViewController.m in Sources */,
+				2804DB8A17198BF200C36628 /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +335,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jeff Linwood (N2FMN37GGK)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -330,8 +349,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "4C7EB5F6-9364-4B3C-8EE3-6079835EFEDB";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -348,14 +368,16 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jeff Linwood (N2FMN37GGK)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "4C7EB5F6-9364-4B3C-8EE3-6079835EFEDB";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
