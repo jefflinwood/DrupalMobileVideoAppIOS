@@ -20,6 +20,8 @@
     VideoStreamViewController *vc = [[VideoStreamViewController alloc] initWithNibName:@"VideoStreamViewController" bundle:nil];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = navController;
+    //set navigation bar tint
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:133.0/255.0 green:53.0/255.0 blue:163.0/255.0 alpha:1.0]];
     [self.window makeKeyAndVisible];
     [AppData sharedInstance];
     return YES;
